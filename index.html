@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CDN link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <!-- Font Awesome CDN link -->
+  <script src="https://kit.fontawesome.com/dd47cb6580.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="sectionCalculationContainer" class="box">
+    <div class="form-container">
+      <div class="row">
+        <div class="col-12">
+          <form>
+            
+            <div class="mb-3">
+              <label for="income">Enter gross annual income</label>
+              <i class="fa-regular fa-question design"></i>
+              <input type="text" class="form-control" id="income" placeholder="Enter your annual income">
+            </div>
+            <div class="mb-3">
+              <label for="extra-income">Enter extra income</label>
+              <i class="fa-regular fa-question design"></i>
+              <input type="text" class="form-control" id="extra-income" placeholder="Enter extra income from other sources">
+              <i class="fa-solid fa-exclamation design-2"></i>
+            </div>
+            <div class="mb-3">
+              <label for="age">Enter age group</label>
+              <i class="fa-regular fa-question design"></i>
+              <select id="age" class="form-control">
+                <option>Select your age</option>
+                <option> < 40  </option>
+                <option> >=40 & >60 </option>
+                <option> >= 60 </option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="deductions">Enter total applicable deductions</label>
+              <i class="fa-regular fa-question design"></i>
+              <input type="text" class="form-control" id="deductions" placeholder="Add total applicable deductions">
+            </div>
+            <button onclick="handleSubmit" class="button" id="btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal" class="container">
+    <div class="row">
+      <div class="col-12">
+        <div>
+          <h1>Your overall income will be</h1>
+          <h3 id="tax-info"></h3>
+          <p>after tax deduction</p>
+          <button class="button-1" id="close-modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
